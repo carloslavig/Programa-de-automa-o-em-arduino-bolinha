@@ -53,15 +53,22 @@ void setup()
 
 void loop() {
 
+while (pos = 0; pos = 135) {
 
-pos = 135;
+    if (pos < 135) {
+    pos += 1;
+    delay(10);
+    }
+    else if (pos > 135) {
+        pos -= 1;
         meuServo.write(pos); 
 
         delay(15);
-
-
-
-    delay(10);
+    }
+    else if (pos == 135) {
+        break;
+    }
+}
 
 
   int dist_mm = ultrassom.distanceInMillimeters();
