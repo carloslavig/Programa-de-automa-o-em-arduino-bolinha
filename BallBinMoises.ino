@@ -53,7 +53,7 @@ void setup()
 
 void loop() {
 
-while (pos = 0; pos = 135) {
+while (pos != 135) {
 
     if (pos < 135) {
     pos += 1;
