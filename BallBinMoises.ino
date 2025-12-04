@@ -53,19 +53,21 @@ void setup()
 
 void loop() {
 
-while (pos != 135) {
+while (dist_mm != 126) {
 
-    if (pos < 135) {
+    if (dist_mm < 126) {
     pos += 1;
+     meuServo.write(pos); 
     delay(10);
     }
-    else if (pos > 135) {
+    else if (dist_mm > 126) {
         pos -= 1;
         meuServo.write(pos); 
 
         delay(15);
     }
-    else if (pos == 135) {
+    else if (dist_mm == 126) {
+         meuServo.write(pos); 
         break;
     }
 }
